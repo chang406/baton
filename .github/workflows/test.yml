@@ -1,0 +1,30 @@
+# baton·audit 시험: push와 PR 때 Linux·Windows에서 자동 실행
+name: test
+on:
+  push:
+    branches: [main] # 작업 브랜치에 같은 커밋을 올릴 때 두 번 돌지 않게
+  pull_request:
+  workflow_dispatch:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # known.mjs가 harness 이력(옛 키트 버전)을 읽는다
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: git identity for test fixtures
+        run: |
+          git config --global user.email ci@example.com
+          git config --global user.name ci
+      - name: syntax
+        shell: bash
+        run: for f in baton/*.mjs baton/tools/*.mjs audit/*.mjs audit/hooks/*.mjs baton/files/scripts/baton/*.mjs tests/*.mjs; do node --check "$f"; done
+      - name: tests
+        run: node --test "tests/*.test.mjs"

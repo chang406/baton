@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "node -e \"const cp=require('node:child_process');const path=require('node:path');const root=cp.execFileSync('git',['rev-parse','--show-toplevel'],{encoding:'utf8'}).trim();cp.execFileSync(process.execPath,[path.join(root,'scripts/baton/status.mjs')],{cwd:root,stdio:'inherit'});\"",
+            "timeout": 15,
+            "type": "command",
+            "statusMessage": "Loading Baton status"
+          }
+        ]
+      }
+    ]
+  }
+}
