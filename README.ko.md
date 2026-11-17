@@ -94,6 +94,10 @@ Node 22, 추가 설치 없음. 임시 폴더의 가짜 프로젝트로 설치·�
 
 이 저장소의 이력은 공개 시점에서 새로 시작했다. 그 전 버전의 줄은 `baton/known-history.json`에 모아 두어 옛 설치본도 알아본다.
 
+## 앞선 시도
+
+baton은 세 번째 시도다. 앞의 두 프로젝트는 로컬 서버로 세션끼리 잇는 쪽이었다(캐릭터와 말투 기억을 넣은 멀티 pane 작업 환경 → 요청 전달만 남긴 relay). 둘 다 멈췄고, 거기서 배운 것이 서버 없이 파일과 Git으로 가는 지금 설계로 이어졌다. 코드와 회고: [chang406/agent-experiments](https://github.com/chang406/agent-experiments).
+
 ## 라이선스
 
 [MIT](LICENSE)
