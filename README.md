@@ -94,6 +94,10 @@ Stated plainly: this is a tool one person shaped over about a month of their own
 
 This repository's history starts at the public release. Lines from earlier versions are kept in `baton/known-history.json` so older installs are still recognised.
 
+## Earlier experiments
+
+baton is the third attempt. Two earlier projects tried to connect live sessions with a local server: a persona-driven multi-pane workspace, then a slimmed request relay. Both stopped, and their lessons led to baton's server-free, file-and-Git design. Code and retrospectives (Korean): [chang406/myade-relay](https://github.com/chang406/myade-relay).
+
 ## License
 
 [MIT](LICENSE)
