@@ -96,7 +96,7 @@ This repository's history starts at the public release. Lines from earlier versi
 
 ## Earlier experiments
 
-baton is the third attempt. Two earlier projects tried to connect live sessions with a local server: a persona-driven multi-pane workspace, then a slimmed request relay. Both stopped, and their lessons led to baton's server-free, file-and-Git design. Code and retrospectives (Korean): [chang406/agent-experiments](https://github.com/chang406/agent-experiments).
+baton is the third attempt. Two earlier projects tried to connect live sessions with a local server: a persona-driven multi-pane workspace, then a slimmed request relay. Both stopped, and their lessons led to baton's server-free, file-and-Git design. Code and retrospectives (Korean): [chang406/myade-relay](https://github.com/chang406/myade-relay).
 
 ## License
 
